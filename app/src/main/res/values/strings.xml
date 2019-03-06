@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">WGU Degree Plan</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_editor">Edit Term</string>
+    <string name="edit_term_name">Name</string>
+    <string name="edit_term_start">Start</string>
+    <string name="edit_term_end">End</string>
+    <string name="new_term">New Term</string>
+    <string name="title_course_editor">Edit Course</string>
+    <string name="new_course">Add Course</string>
+    <string name="edit_start">Start</string>
+    <string name="edit_name">Name</string>
+    <string name="edit_end">End</string>
+    <string name="edit_note">Notes</string>
+    <string name="title_course">Course Name</string>
+    <string name="edit_mentor">Mentor(s)</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="title_activity_insert_term">Add Term</string>
+    <string name="edit_first_name">First</string>
+    <string name="edit_last_name">Last</string>
+    <string name="edit_phone">Phone</string>
+    <string name="edit_email">Email</string>
+    <string name="mentor_insert">Add Mentor</string>
+    <string name="new_mentor">Add Mentor</string>
+    <string name="course_title">Course Name</string>
+    <string name="course_notes">Notes:</string>
+    <string name="title_mentor_editor">Edit Mentor</string>
+    <string name="new_assessment">Add Assessment</string>
+    <string name="title_assessment_insert">Add Assessment</string>
+    <string name="channel_name">channel</string>
+    <string name="channel_description">channel description</string>
+    <string name="due_date">Due Date</string>
+
+    <string-array name="status_array">
+        <item>Plan To Take</item>
+        <item>In Progress</item>
+        <item>Completed</item>
+        <item>Dropped</item>
+    </string-array>
+
+    <string-array name="assessmentType_array">
+        <item>Type</item>
+        <item>Performance</item>
+        <item>Objective</item>
+    </string-array>
+    <string name="title_activity_main">MainActivity</string>
+
+
+</resources>

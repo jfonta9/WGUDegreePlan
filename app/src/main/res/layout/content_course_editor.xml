@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:id="@+id/courseName"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:inputType=""
+        android:text="@string/edit_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/courseStart"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:editable="false"
+        android:ems="10"
+        android:inputType=""
+        android:text="@string/edit_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseName" />
+
+    <ImageButton
+        android:id="@+id/editStartDateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorWhite"
+        app:layout_constraintStart_toEndOf="@+id/courseStart"
+        app:layout_constraintTop_toBottomOf="@+id/courseName"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+    <EditText
+        android:id="@+id/courseEnd"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:editable="false"
+        android:ems="10"
+        android:inputType=""
+        android:text="@string/edit_end"
+        app:layout_constraintStart_toEndOf="@+id/editStartDateButton"
+        app:layout_constraintTop_toBottomOf="@+id/statusSpinner" />
+
+    <ImageButton
+        android:id="@+id/editEndButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/colorWhite"
+        app:layout_constraintStart_toEndOf="@+id/courseEnd"
+        app:layout_constraintTop_toBottomOf="@+id/statusSpinner"
+        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
+
+
+    <Spinner
+        android:id="@+id/statusSpinner"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="30dp"
+        android:entries="@array/status_array"
+        app:layout_constraintStart_toEndOf="@+id/courseName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:id="@+id/scrollLayout"
+        style="@android:style/Widget.DeviceDefault.Light.ScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideInset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseEnd">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dip">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Mentor(s)"
+                    android:textSize="25dp" />
+
+                <ImageButton
+                    android:id="@+id/addMentorButton"
+                    android:layout_width="55dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="115dp"
+                    android:layout_marginLeft="115dp"
+                    android:layout_marginTop="0dp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:onClick="newMentor"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+            </RelativeLayout>
+
+
+            <ListView
+                android:id="@+id/mentorListView"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="10dip"></ListView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center_vertical"
+                    android:text="Assessment(s)"
+                    android:textSize="25dp" />
+
+                <ImageButton
+                    android:id="@+id/addAssessmentButton"
+                    android:layout_width="55dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="179dp"
+                    android:layout_marginLeft="179dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:onClick="newAssessment"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/assessmentListView"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="10dip">
+
+
+            </ListView>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center_vertical"
+                    android:text="Note(s)"
+                    android:textSize="25dp" />
+
+                <ImageButton
+                    android:id="@+id/addNotesButton"
+                    android:layout_width="55dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="right"
+                    android:layout_marginStart="93dp"
+                    android:layout_marginLeft="93dp"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@color/colorWhite"
+                    android:onClick="newNote"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/notesListView"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="10dip"></ListView>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>
